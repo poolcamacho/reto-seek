@@ -11,21 +11,31 @@ El sistema está dividido en varios servicios independientes para maximizar la e
 Gestión de autenticación y autorización utilizando JWT. Protege las APIs del sistema asegurando que solo usuarios autorizados puedan acceder.
 
 [Repositorio del Auth Service](https://github.com/poolcamacho/auth-service)
+[Swagger](https://jananpbnuv.us-east-1.awsapprunner.com/swagger/index.html#/)
 
 ### 2. **Candidates Service**
 Servicio dedicado a la gestión de información de candidatos. Permite realizar operaciones CRUD sobre el modelo de candidatos.
 
 [Repositorio del Candidates Service](https://github.com/poolcamacho/candidates-service)
+[Swagger](https://jananpbnuv.us-east-1.awsapprunner.com/swagger/index.html#/)
 
-### 3. **Job Service**
+### 3. **Companies Service**
+Servicio dedicado a la gestión de información de compañias. Permite realizar operaciones CRUD sobre el modelo de compañias.
+
+[Repositorio del Candidates Service](https://github.com/poolcamacho/companies-service)
+[Swagger](https://jananpbnuv.us-east-1.awsapprunner.com/swagger/index.html#/)
+
+### 4. **Job Service**
 Módulo encargado de manejar las ofertas de empleo disponibles en el sistema.
 
 [Repositorio del Job Service](https://github.com/poolcamacho/job-service)
+[Swagger](https://jananpbnuv.us-east-1.awsapprunner.com/swagger/index.html#/)
 
-### 4. **Application Service**
+### 5. **Application Service**
 Gestiona las postulaciones de los candidatos a las ofertas de empleo.
 
 [Repositorio del Application Service](https://github.com/poolcamacho/application-service)
+[Swagger](https://jananpbnuv.us-east-1.awsapprunner.com/swagger/index.html#/)
 
 ## Despliegue
 Cada servicio está desplegado individualmente utilizando AWS App Runner. Puedes acceder a las APIs de los servicios mediante los siguientes enlaces:
