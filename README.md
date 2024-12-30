@@ -55,7 +55,7 @@ Módulo encargado de manejar las ofertas de empleo disponibles en el sistema.
 - **Crear Oferta de Empleo**: `POST /jobs`
   - Crea una nueva oferta de empleo.
 
-[Repositorio del Job Service](https://github.com/poolcamacho/job-service)  
+[Repositorio del Job Service](https://github.com/poolcamacho/jobs-service)  
 [Swagger](https://jobs.codewisetech.biz/swagger/index.html#/)
 
 ---
