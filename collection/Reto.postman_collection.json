@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "a7b9e212-251e-473b-aa91-0676ea7205e0",
+		"name": "Reto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40684418"
+	},
+	"item": [
+		{
+			"name": "register user - ok",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"news\",\n    \"email\": \"new_user22@example.com\",\n    \"password\": \"securepassword123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://auth.codewisetech.biz/register",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user - fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"news\",\n    \"email\": \"new_user22@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://auth.codewisetech.biz/register",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"new_user22@example.com\",\n    \"password\": \"securepassword123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://auth.codewisetech.biz/login",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidates list - fail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://candidates.codewisetech.biz/candidates",
+					"protocol": "https",
+					"host": [
+						"candidates",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidates list - ok",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://candidates.codewisetech.biz/candidates",
+					"protocol": "https",
+					"host": [
+						"candidates",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidates create - fail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane Doe\",\n    \"email\": \"jane.doe@example.com\",\n    \"gender\": \"female\",\n    \"salary_expected\": 60000.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates.codewisetech.biz/candidates",
+					"protocol": "https",
+					"host": [
+						"candidates",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidates create - ok",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane Doe\",\n    \"email\": \"jane.doe@example.com\",\n    \"gender\": \"female\",\n    \"salary_expected\": 60000.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates.codewisetech.biz/candidates",
+					"protocol": "https",
+					"host": [
+						"candidates",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs list - ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jobs.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"jobs",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs list - fail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jobs.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"jobs",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs create - ok",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Backend Developer\",\n    \"description\": \"Develop backend services for applications.\",\n    \"salary_range\": \"4000-6000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jobs.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"jobs",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs create - fail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Backend Developer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jobs.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"jobs",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interviews list - ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://interviews.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"interviews",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interviews list - fail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://interviews.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"interviews",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interviews create - ok",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"candidate_id\": 101,\n  \"job_id\": 202,\n  \"interview_date\": \"2024-12-30T15:00:00Z\",\n  \"feedback\": \"Good technical skills.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://interviews.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"interviews",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interviews create - fail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c2VyMjJAZXhhbXBsZS5jb20iLCJleHAiOjE3MzU2Mzg5OTIsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjV9.7emWBTZLtNXFYHee-sHIW2Lrns-R4Lm5QwAF7Zw-JHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Backend Developer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://interviews.codewisetech.biz/jobs",
+					"protocol": "https",
+					"host": [
+						"interviews",
+						"codewisetech",
+						"biz"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
